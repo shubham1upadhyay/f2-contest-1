@@ -7,21 +7,40 @@ let arr = [
 ];
 
 function PrintStudentswithMap() {
-  //Write your code here , just console.log
+  let havingMarksOver50 = arr.filter(student => student.marks > 50);
+	let studentNames = havingMarksOver50.map(student => student.name);
+	console.log(studentNames);
 }
 
 function PrintStudentsbyForEach() {
-  //Write your code here , just console.log
+  let havingMarksOver50 = arr.filter(student => student.marks > 50);
+	havingMarksOver50.forEach(student => console.log(student));
 }
 
 function addData() {
-  //Write your code here, just console.log
+  let newArr = {id: 4, name: "shubham", age: "23", marks: 55};
+	arr.push(newArr);
+	console.log(arr);
 }
 
 function removeFailedStudent() {
-  //Write your code here, just console.log
+  arr = arr.filter(student => student.marks >= 50);
+	console.log(arr);
 }
 
 function concatenateArray() {
-  //Write your code here, just console.log
+  let newArr = [
+	  {id: 5, name: "rahul", age: "27", marks: 30},
+	  {id: 6, name: "sanjeev", age: "28", marks: 40},
+	  {id: 7, name: "shivam", age: "24", marks: 51}
+	];
+	arr = arr.concat(newArr);
+	console.log(arr);
 }
+
+
+PrintStudentswithMap();
+PrintStudentsbyForEach();
+addData();
+removeFailedStudent();
+concatenateArray();
