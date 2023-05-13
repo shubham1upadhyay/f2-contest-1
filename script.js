@@ -18,7 +18,7 @@ function PrintStudentsbyForEach() {
 }
 
 function addData() {
-  let newArr = {id: 4, name: "shubham", age: "23", marks: 55};
+  let newArr = {id: 4, name: "susan", age: "20", marks: 45};
 	arr.push(newArr);
 	console.log(arr);
 }
